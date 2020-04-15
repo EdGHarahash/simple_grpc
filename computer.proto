@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+message Number {
+    float value = 1;
+}
+
+service Computer {
+
+  rpc SquareRoot(Number) returns (Number) {}
+
+  rpc Primes(Number) returns (stream Number) {}
+
+  rpc STD(stream Number) returns (Number) {}
+
+  rpc MaxElem(stream Number) returns (stream Number) {}
+}
